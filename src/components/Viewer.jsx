@@ -11,6 +11,7 @@ import {
   useProgress,
 } from "@react-three/drei";
 import modelUrl from "../assets/model.glb?url";
+import BG from "/public/BG_VIEWER.jpg";
 
 function Loader() {
   const { progress } = useProgress();
@@ -111,7 +112,7 @@ export default function Viewer({ modelUrlProp = null }) {
         dpr={[1, 2]}
         gl={{ preserveDrawingBuffer: true, powerPreference: "high-performance", alpha: true }}
         onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
-        style={{ background: "radial-gradient(ellipse at center, #4d7b9d 0%, #fafafa 100%)" }}
+        style={{ background: `url(${BG}) no-repeat center center / cover` }}
       >
         <Suspense fallback={<Loader />}>
           <Scene modelUrl={finalModelUrl} />
