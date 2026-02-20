@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Archivos de modelo 3D pesados
+src/assets/*.glb
+public/*.glb
