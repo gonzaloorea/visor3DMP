@@ -4,7 +4,7 @@ export default function Side() {
   const [open, setOpen] = useState(false);
 
   return (
-    <aside className="md:flex-none md:w-[350px] w-full bg-[#f5f5f5] md:overflow-y-auto border-r border-[#ddd] md:border-b-0 border-b flex flex-col max-h-[50vh] md:max-h-none md:flex md:flex-col">
+    <aside className="md:flex-none md:w-87.5 w-full bg-[#f5f5f5] md:overflow-y-auto border-r border-[#ddd] md:border-b-0 border-b flex flex-col max-h-[50vh] md:max-h-none md:flex md:flex-col">
       {/* Header: botón desplegable en móvil, título estático en desktop */}
       <button
         className="flex-none w-full flex items-center justify-between px-7.5 py-4 md:cursor-default md:pointer-events-none"
@@ -23,7 +23,7 @@ export default function Side() {
         </h2>
 
         <section className="mb-7.5">
-          <h3 className="text-[#BA0C2F] font-semibold mb-[10px]">
+          <h3 className="text-[#BA0C2F] font-semibold mb-2.5">
             Características
           </h3>
           <ul className="leading-[1.8] text-[#5B6770] text-[14px]">
@@ -33,7 +33,7 @@ export default function Side() {
         </section>
 
         <section className="mb-7.5">
-          <h3 className="text-[#BA0C2F] text-[16px] mb-[10px]">
+          <h3 className="text-[#BA0C2F] text-[16px] mb-2.5">
             Especificaciones
           </h3>
           <table className="w-full border-collapse text-[14px] text-[#555]">
@@ -63,7 +63,7 @@ export default function Side() {
         </section>
 
         <section className="mb-7.5">
-          <h3 className="text-[#BA0C2F] text-[16px] mb-[10px]">
+          <h3 className="text-[#BA0C2F] text-[16px] mb-2.5">
             Controles 3D
           </h3>
           <div className="bg-white p-3.75 rounded-[5px] text-[13px] text-[#666] leading-[1.6]">
@@ -74,7 +74,7 @@ export default function Side() {
         </section>
 
         <section>
-          <h3 className="text-[#BA0C2F] text-[16px] mb-[10px]">
+          <h3 className="text-[#BA0C2F] text-[16px] mb-2.5">
             DOCUMENTACIÓN
           </h3>
           <div className="bg-white p-3.75 rounded-[5px] text-[13px] text-[#666] leading-[1.6]">

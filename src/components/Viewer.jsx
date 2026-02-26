@@ -11,10 +11,12 @@ import {
   useProgress,
 } from "@react-three/drei";
 import modelUrl from "../assets/model.glb?url";
-import BG from "/public/BG_VIEWER.jpg";
+import BG from "/BG_VIEWER.jpg";
 
 function Loader() {
-  const { progress } = useProgress();
+  const { progress, active } = useProgress();
+
+  if (!active) return null;
 
   return (
     <Html center>
@@ -74,9 +76,7 @@ function Scene({ modelUrl }) {
 }
 
 function Model({ url, bounds }) {
-  const gltf = useGLTF(url, undefined, (progress) => {
-    console.log(`Cargando: ${(progress.loaded / progress.total * 100).toFixed(0)}%`);
-  });
+  const gltf = useGLTF(url);
   
   const modelRef = useRef();
 
@@ -114,9 +114,10 @@ export default function Viewer({ modelUrlProp = null }) {
         onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
         style={{ background: `url(${BG}) no-repeat center center / cover` }}
       >
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={null}>
           <Scene modelUrl={finalModelUrl} />
         </Suspense>
+        <Loader />
       </Canvas>
     </div>
   );
