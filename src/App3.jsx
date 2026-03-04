@@ -29,8 +29,8 @@ import controllerhand from "./assets/controllers_hand.svg";
 import logoMP from "/MP_gris.svg";
 
 const userNavigation = [
-  { name: 'Right position', href: '#' },
-  { name: 'Left position', href: '#' },
+  { name: 'MP Lifts', href: 'http://www.mplifts.com' },
+  { name: 'MP SERVICENTER', href: 'https://www.mp-servicenter.com/portal/' },
 ]
 
 // Lazy load del componente Viewer (más pesado con Three.js)
@@ -100,21 +100,17 @@ return (
                       <p className="mb-2 text-[#BA0C2F] font-light text-xl">
                         Rutado mangueras maGO-Variador
                       </p>
-
-                      <section className="my-2.5">
-                        <h3 className="text-[#BA0C2F] font-semibold mb-2.5">
-                          Posición bancada
+                      <section className="mb-1.5 bg-gray-100 p-2.75 rounded-[5px]">
+                        <h3 className="text-red100 font-semibold mb-0.5">
+                          Posición bancada: <span className="text-grey100">Derecha</span>
                         </h3>
-                        <ul className="leading-[1.8] text-[#5B6770] text-[14px]">
-                          <li>Izquierda</li>
-                        </ul>
                       </section>
 
-                      <section className="mb-7.5">
-                        <h3 className="text-[#BA0C2F] font-semibold text-[16px] mb-2.5">
+                      <section className="mb-1.5 bg-gray-100 p-2.75 rounded-[5px]">
+                        <h3 className="text-red100 text-[16px] font-semibold mb-2.5">
                           Especificaciones
                         </h3>
-                        <table className="w-full border-collapse text-[14px] text-[#555]">
+                        <table className="w-full border-collapse text-[14px] text-grey100">
                           <tbody>
                             <tr className="border-b border-[#ddd]">
                               <td className="py-1 font-semibold"><span className="px-2 rounded-lg bg-amber-500 text-white">XMAQ_1</span></td>
@@ -140,36 +136,40 @@ return (
                         </table>
                       </section>
 
-                      <section className="mb-7.5">
-                        <h3 className="text-[#BA0C2F] font-semibold text-[16px] mb-2.5">
+                      <section className="mb-1.5 bg-gray-100 p-2.75 rounded-[5px]">
+                        <h3 className="text-red100 text-[16px] font-semibold mb-0.5">
                           Controles 3D
                         </h3>
-                        <div className="p-3.75">
-                          <img src={controllerhand} alt="controller hand" className="h-16" />
+                        <div className="flex justify-center p-2.75 rounded-[5px] text-[13px] text-[#666] leading-[1.6]">
+                            <img src={controllerhand} alt="controller hand" className="h-12" />
                         </div>
                       </section>
 
-                      <section>
-                        <h3 className="text-[#BA0C2F] font-semibold text-[16px] mb-1">
+                      <section className="mb-1.5 bg-gray-100 p-2.75 rounded-[5px]">
+                        <h3 className="text-red100 text-[16px] font-semibold mb-0.5">
                           DOCUMENTACIÓN
                         </h3>
-                        <div className="bg-white p-2.75 rounded-[5px] text-[13px] text-[#666] leading-[1.6]">
-                          <table className="w-full border-collapse text-[14px] text-[#555]">
-                          <tbody>
-                            <tr className="border-b border-[#ddd]">
-                              <td className="py-0.5 font-semibold">Ficha técnica:</td>
-                              <td className="py-0.5">download</td>
-                            </tr>
-                            <tr className="border-b border-[#ddd]">
-                              <td className="py-0.5 font-semibold">Catálogo:</td>
-                              <td className="py-0.5">download</td>
-                            </tr>
-                            <tr className="border-b border-[#ddd]">
-                              <td className="py-0.5 font-semibold">Planos:</td>
-                              <td className="py-0.5">download</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <div className="bg-white p-3.75 rounded-[5px] text-[13px] text-[#666] leading-[1.6]">
+                          <table className="w-full border-collapse text-[14px] text-grey100">
+                            <tbody>
+                              <tr className="border-b border-grey20">
+                                <td className="py-0.5 font-semibold">Ficha técnica:</td>
+                                <td className="py-0.5">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                  </svg>
+                                </td>
+                              </tr>
+                              <tr className="border-b border-grey20">
+                                <td className="py-0.5 font-semibold">Catálogo:</td>
+                                <td className="py-0.5">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                  </svg>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -201,25 +201,21 @@ return (
             </div>
             <nav className="relative flex flex-1 flex-col">
                 <div className={`px-2 pb-7.5 min-h-0 overflow-y-auto md:overflow-y-visible`}>
-                  <p className="mb-4 text-[#BA0C2F] font-light text-xl">
-                    Rutado mangueras maGO-Variador
+                  <p className="mb-4 text-red100 font-light text-xl">
+                    Rutado mangueras<br />maGO-Variador
                   </p>
 
-                  <section className="mb-7.5">
-                    <h3 className="text-[#BA0C2F] font-semibold mb-2.5">
-                      Posición bancada
+                  <section className="mb-1.5 bg-gray-100 p-2.75 rounded-[5px]">
+                    <h3 className="text-red100 font-semibold mb-0.5">
+                      Posición bancada: <span className="text-grey100">Derecha</span>
                     </h3>
-                    <ul className="leading-[1.8] text-[#5B6770] text-[14px]">
-                      <li>Diseño profesional y moderno</li>
-                      <li>Tecnología de última generación</li>
-                    </ul>
                   </section>
 
-                  <section className="mb-7.5">
-                    <h3 className="text-[#BA0C2F] text-[16px] font-semibold mb-2.5">
+                  <section className="mb-1.5 bg-gray-100 p-2.75 rounded-[5px]">
+                    <h3 className="text-red100 text-[16px] font-semibold mb-2.5">
                       Especificaciones
                     </h3>
-                    <table className="w-full border-collapse text-[14px] text-[#555]">
+                    <table className="w-full border-collapse text-[14px] text-grey100">
                       <tbody>
                         <tr className="border-b border-[#ddd]">
                           <td className="py-1 font-semibold"><span className="px-2 rounded-lg bg-amber-500 text-white">XMAQ_1</span></td>
@@ -245,36 +241,40 @@ return (
                     </table>
                   </section>
 
-                  <section className="mb-7.5">
-                    <h3 className="text-[#BA0C2F] text-[16px] font-semibold mb-1">
+                  <section className="mb-1.5 bg-gray-100 p-2.75 rounded-[5px]">
+                    <h3 className="text-red100 text-[16px] font-semibold mb-0.5">
                       Controles 3D
                     </h3>
-                    <div className="bg-white p-3.75 rounded-[5px] text-[13px] text-[#666] leading-[1.6]">
+                    <div className="flex justify-center p-2.75 rounded-[5px] text-[13px] text-[#666] leading-[1.6]">
                         <img src={controllermouse} alt="controller mouse" className="h-12" />
                     </div>
                   </section>
 
-                  <section>
-                    <h3 className="text-[#BA0C2F] text-[16px] font-semibold mb-2.5">
+                  <section className="mb-1.5 bg-gray-100 p-2.75 rounded-[5px]">
+                    <h3 className="text-red100 text-[16px] font-semibold mb-0.5">
                       DOCUMENTACIÓN
                     </h3>
                     <div className="bg-white p-3.75 rounded-[5px] text-[13px] text-[#666] leading-[1.6]">
-                      <table className="w-full border-collapse text-[14px] text-[#555]">
-                      <tbody>
-                        <tr className="border-b border-[#ddd]">
-                          <td className="py-0.5 font-semibold">Ficha técnica:</td>
-                          <td className="py-0.5">download</td>
-                        </tr>
-                        <tr className="border-b border-[#ddd]">
-                          <td className="py-0.5 font-semibold">Catálogo:</td>
-                          <td className="py-0.5">download</td>
-                        </tr>
-                        <tr className="border-b border-[#ddd]">
-                          <td className="py-0.5 font-semibold">Planos:</td>
-                          <td className="py-0.5">download</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                        <table className="w-full border-collapse text-[14px] text-grey100">
+                          <tbody>
+                            <tr className="border-b border-grey20">
+                              <td className="py-0.5 font-semibold">Ficha técnica:</td>
+                              <td className="py-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                </svg>
+                              </td>
+                            </tr>
+                            <tr className="border-b border-grey20">
+                              <td className="py-0.5 font-semibold">Catálogo:</td>
+                              <td className="py-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                </svg>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                     </div>
                   </section>
                 </div>
@@ -328,13 +328,15 @@ return (
                   </MenuButton>
                   <MenuItems
                     transition
-                    className="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg outline outline-gray-900/5 transition data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+                    className="absolute right-0 z-10 mt-2.5 w-40 origin-top-right rounded-md bg-white py-2 shadow-lg outline outline-gray-900/5 transition data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
                   >
                     {userNavigation.map((item) => (
                       <MenuItem key={item.name}>
                         <a
                           href={item.href}
                           className="block px-3 py-1 text-sm/6 text-gray-900 data-focus:bg-gray-50 data-focus:outline-hidden"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           {item.name}
                         </a>
