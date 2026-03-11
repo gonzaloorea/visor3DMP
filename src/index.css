@@ -3,6 +3,7 @@
 
 @theme {
   --font-roboto: 'Roboto', sans-serif;
+  --color-red100: #B21428;
   --color-red100: oklch(50.24% 0.1969 20.61);
   --color-red80: oklch(55.43% 0.175 13.45);
   --color-red60: oklch(63.07% 0.1342 9.14);
