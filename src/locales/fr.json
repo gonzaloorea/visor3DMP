@@ -1,0 +1,34 @@
+{
+  "loading3d": "Chargement du visualiseur 3D...",
+  "loadingModel": "Chargement du modèle…",
+  "links": "Liens",
+  "settings": "Paramètres",
+  "openSidebar": "Ouvrir le menu latéral",
+  "closeSidebar": "Fermer le menu latéral",
+  "product": {
+    "title": "Cheminement des flexibles",
+    "subtitle": "maGO-Variateur",
+    "bankPosition": "Position du bâti :",
+    "bankValue": "Droite"
+  },
+  "side": {
+    "left": "Gauche",
+    "right": "Droite"
+  },
+  "specs": {
+    "title": "Spécifications",
+    "xmaq": "Tension machine",
+    "xcmaq": "Commande machine",
+    "xfr": "Tension frein",
+    "xdb15": "Encodeur",
+    "xbr": "Résistance de frein"
+  },
+  "controls3d": {
+    "title": "Contrôles 3D"
+  },
+  "docs": {
+    "title": "DOCUMENTATION",
+    "datasheet": "Fiche technique :",
+    "catalog": "Catalogue :"
+  }
+}

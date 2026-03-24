@@ -1,0 +1,34 @@
+{
+  "loading3d": "Cargando visor 3D...",
+  "loadingModel": "Cargando modelo…",
+  "links": "Enlaces",
+  "settings": "Ajustes",
+  "openSidebar": "Abrir menú lateral",
+  "closeSidebar": "Cerrar menú lateral",
+  "product": {
+    "title": "Rutado mangueras",
+    "subtitle": "maGO-Variador",
+    "bankPosition": "Posición bancada:",
+    "bankValue": "Derecha"
+  },
+  "side": {
+    "left": "Izquierda",
+    "right": "Derecha"
+  },
+  "specs": {
+    "title": "Especificaciones",
+    "xmaq": "Tensión máquina",
+    "xcmaq": "Control de máquina",
+    "xfr": "Tensión freno",
+    "xdb15": "Encoder",
+    "xbr": "Resistencia de freno"
+  },
+  "controls3d": {
+    "title": "Controles 3D"
+  },
+  "docs": {
+    "title": "DOCUMENTACIÓN",
+    "datasheet": "Ficha técnica:",
+    "catalog": "Catálogo:"
+  }
+}

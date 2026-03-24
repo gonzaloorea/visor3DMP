@@ -1,0 +1,34 @@
+{
+  "loading3d": "Loading 3D viewer...",
+  "loadingModel": "Loading model…",
+  "links": "Links",
+  "settings": "Settings",
+  "openSidebar": "Open sidebar",
+  "closeSidebar": "Close sidebar",
+  "product": {
+    "title": "Hose routing",
+    "subtitle": "maGO-Drive",
+    "bankPosition": "Bedplate position:",
+    "bankValue": "Right"
+  },
+  "side": {
+    "left": "Left",
+    "right": "Right"
+  },
+  "specs": {
+    "title": "Specifications",
+    "xmaq": "Machine voltage",
+    "xcmaq": "Machine control",
+    "xfr": "Brake voltage",
+    "xdb15": "Encoder",
+    "xbr": "Brake resistor"
+  },
+  "controls3d": {
+    "title": "3D Controls"
+  },
+  "docs": {
+    "title": "DOCUMENTATION",
+    "datasheet": "Data sheet:",
+    "catalog": "Catalogue:"
+  }
+}

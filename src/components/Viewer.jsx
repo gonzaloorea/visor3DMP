@@ -1,5 +1,6 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Suspense, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import {
   OrbitControls,
   Environment,
@@ -8,14 +9,16 @@ import {
   useGLTF,
   useProgress,
 } from "@react-three/drei";
-import modelUrl from "../assets/model_opt.glb?url";
+import modelUrl from "../assets/model_izq_opt.glb?url";
 import BG from "/BG_VIEWER.jpg";
+import * as THREE from "three";
 
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
 function Loader() {
   const { progress, active } = useProgress();
+  const { t } = useTranslation();
   if (!active) return null;
   return (
     <div style={{
@@ -24,7 +27,7 @@ function Loader() {
       pointerEvents: "none", zIndex: 10,
     }}>
       <div style={{ fontFamily: "system-ui", fontSize: 14, textAlign: "center" }}>
-        <div style={{ marginBottom: 12 }}>Cargando modelo…</div>
+        <div style={{ marginBottom: 12 }}>{t("loadingModel")}</div>
         <div style={{
           width: 200, height: 8, backgroundColor: "#e0e0e0",
           borderRadius: 4, overflow: "hidden", boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
@@ -108,6 +111,9 @@ export default function Viewer({ modelUrlProp = null }) {
           antialias: !isIOS,
           failIfMajorPerformanceCaveat: false,
           precision: isIOS ? "mediump" : "highp",
+          toneMapping: THREE.ACESFilmicToneMapping,
+          toneMappingExposure: 1.2,
+          outputColorSpace: THREE.SRGBColorSpace
         }}
         onCreated={({ gl }) => {
           gl.shadowMap.autoUpdate = false;

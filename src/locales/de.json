@@ -1,0 +1,34 @@
+{
+  "loading3d": "3D-Viewer wird geladen...",
+  "loadingModel": "Modell wird geladen…",
+  "links": "Links",
+  "settings": "Einstellungen",
+  "openSidebar": "Seitenleiste öffnen",
+  "closeSidebar": "Seitenleiste schließen",
+  "product": {
+    "title": "Schlauchführung",
+    "subtitle": "maGO-Umrichter",
+    "bankPosition": "Maschinenposition:",
+    "bankValue": "Rechts"
+  },
+  "side": {
+    "left": "Links",
+    "right": "Rechts"
+  },
+  "specs": {
+    "title": "Spezifikationen",
+    "xmaq": "Maschinenspannung",
+    "xcmaq": "Maschinensteuerung",
+    "xfr": "Bremsspannung",
+    "xdb15": "Encoder",
+    "xbr": "Bremswiderstand"
+  },
+  "controls3d": {
+    "title": "3D-Steuerung"
+  },
+  "docs": {
+    "title": "DOKUMENTATION",
+    "datasheet": "Datenblatt:",
+    "catalog": "Katalog:"
+  }
+}
