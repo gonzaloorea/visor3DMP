@@ -49,13 +49,25 @@ function Scene({ modelUrl }) {
   return (
     <>
       <ambientLight intensity={0.6} />
-      <directionalLight position={[5, 5, 5]} intensity={1.2} />
-      <directionalLight position={[-5, 3, -2]} intensity={0.6} />
+
+      {/* ✅ NUEVA LUZ HEMISFÉRICA */}
+      <hemisphereLight
+        skyColor={"#ffffff"}
+        groundColor={"#444444"}
+        intensity={isIOS ? 1 : 0.6}
+      />
+      <directionalLight position={[5, 5, 5]} intensity={isIOS ? 2 : 1.2} />
+      <directionalLight position={[-5, 3, -2]} intensity={isIOS ? 1.2 : 0.6} />
 
       {/* ✅ En iOS usar environmentIntensity bajo o directamente omitir */}
       {isIOS
         ? <ambientLight intensity={0.8} /> // ← reemplaza Environment en iOS
-        : <Environment preset="studio" />  // ← solo en desktop/Android
+        : <Environment
+            preset="studio"
+            background={false}
+            blur={0.5}
+            intensity={isIOS ? 0.5 : 1}
+          />  // ← solo en desktop/Android
       }
 
       <Bounds fit clip observe margin={0.8}>
@@ -86,8 +98,19 @@ function Model({ url }) {
         if (node.isMesh && node.material) {
           // Reducir calidad de texturas en iOS
           if (node.material.envMapIntensity !== undefined) {
-            node.material.envMapIntensity = 0.3
+            node.material.envMapIntensity = isIOS ? 1.5 : 1
+            node.material.needsUpdate = true
           }
+          // 🔹 Ajuste de materiales para evitar oscuridad
+          if (node.material.roughness !== undefined) {
+            node.material.roughness = Math.min(node.material.roughness, 0.8)
+          }
+
+          if (node.material.metalness !== undefined) {
+            node.material.metalness = Math.min(node.material.metalness, 0.6)
+          }
+
+          node.material.needsUpdate = true
         }
       })
     }
@@ -112,7 +135,7 @@ export default function Viewer({ modelUrlProp = null }) {
           failIfMajorPerformanceCaveat: false,
           precision: isIOS ? "mediump" : "highp",
           toneMapping: THREE.ACESFilmicToneMapping,
-          toneMappingExposure: 1.2,
+          toneMappingExposure: isIOS ? 1.8 : 1.2,
           outputColorSpace: THREE.SRGBColorSpace
         }}
         onCreated={({ gl }) => {
