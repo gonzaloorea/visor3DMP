@@ -98,6 +98,7 @@ export default function App3() {
 return (
     <>
       <div>
+        {/* MOBILE SIDEBAR */}
         <Dialog open={sidebarOpen} onClose={setSidebarOpen} className="relative z-50 lg:hidden">
           <DialogBackdrop
             transition
@@ -139,14 +140,14 @@ return (
                         </h3>
                         <div className="flex gap-1 bg-grey10 rounded p-0.5">
                           <button
-                            onClick={() => handleLadoChange("izq")}
+                            onClick={() => { handleLadoChange("izq"); setSidebarOpen(false); }}
                             className="flex-1 py-1 text-sm font-semibold rounded transition-colors"
                             style={lado === "izq" ? { backgroundColor: "var(--color-red100)", color: "white" } : { color: "var(--color-grey100)" }}
                           >
                             {t("side.left")}
                           </button>
                           <button
-                            onClick={() => handleLadoChange("der")}
+                            onClick={() => { handleLadoChange("der"); setSidebarOpen(false); }}
                             className="flex-1 py-1 text-sm font-semibold rounded transition-colors"
                             style={lado === "der" ? { backgroundColor: "var(--color-red100)", color: "white" } : { color: "var(--color-grey100)" }}
                           >
@@ -231,7 +232,7 @@ return (
           </div>
         </Dialog>
 
-        {/* Static sidebar for desktop */}
+        {/* STATIC SIDEBAR FOR DESKTOP */}
         <div className="hidden bg-white ring-1 ring-white/10 lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-84 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto px-2 pb-4">
@@ -343,7 +344,7 @@ return (
             </nav>
           </div>
         </div>
-        {/* Static main content */}
+        {/* STATIC MAIN CONTENT */}
         <div className="lg:pl-84">
           <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-xs sm:gap-x-6 sm:px-6 lg:px-8">
             <button
