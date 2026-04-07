@@ -28,10 +28,8 @@ import logoW from "./assets/logo_3DMPviewer_white.svg";
 import controllermouse from "./assets/controllers_mouse.svg";
 import controllerhand from "./assets/controllers_hand.svg";
 import logoMP from "/MP_gris.svg";
-import modelIzqUrl from "./assets/model_izq_opt.glb?url";
-import modelDerUrl from "./assets/model_der_opt.glb?url";
-
-const MODEL_MAP = { izq: modelIzqUrl, der: modelDerUrl };
+const S3_BASE = "https://s3.dualstack.eu-west-3.amazonaws.com/portal2-public.mpascensores.com/PROYECTOS/3DMPVIEWER/";
+const MODEL_MAP = { izq: `${S3_BASE}model_izq_opt.glb`, der: `${S3_BASE}model_der_opt.glb` };
 
 function getLadoFromURL() {
   return new URLSearchParams(window.location.search).get("lado") === "der" ? "der" : "izq";

@@ -9,7 +9,7 @@ import {
   useGLTF,
   useProgress,
 } from "@react-three/drei";
-import modelUrl from "../assets/model_izq_opt.glb?url";
+const modelUrl = "https://s3.dualstack.eu-west-3.amazonaws.com/portal2-public.mpascensores.com/PROYECTOS/3DMPVIEWER/model_izq_opt.glb";
 import BG from "/BG_VIEWER.jpg";
 import * as THREE from "three";
 
