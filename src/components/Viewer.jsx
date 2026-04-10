@@ -10,8 +10,9 @@ import {
   useProgress,
 } from "@react-three/drei";
 const modelUrl = "https://s3.dualstack.eu-west-3.amazonaws.com/portal2-public.mpascensores.com/PROYECTOS/3DMPVIEWER/model_izq_opt.glb";
+const hdriUrl = "https://s3.dualstack.eu-west-3.amazonaws.com/portal2-public.mpascensores.com/PROYECTOS/3DMPVIEWER/hdri/photo_studio_01_1k.hdr";
 import BG from "/BG_VIEWER.jpg";
-import * as THREE from "three";
+import * as THREE from "three";
 
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -63,7 +64,7 @@ function Scene({ modelUrl }) {
       {isIOS
         ? <ambientLight intensity={0.8} /> // ← reemplaza Environment en iOS
         : <Environment
-            preset="studio"
+            files={hdriUrl}
             background={false}
             blur={0.5}
             intensity={isIOS ? 0.5 : 1}
